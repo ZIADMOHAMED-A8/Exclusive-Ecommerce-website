@@ -96,6 +96,10 @@ export default function Productpage() {
       className:"toast-success"
     });
   } : ()=>{
+       dispatch(addItemWithQuantity({
+      newItem: data[productIndex],
+      quantity: quantity
+    }));
     Navigate(`/auth/?mode=login`)
     console.log(token)
                    
