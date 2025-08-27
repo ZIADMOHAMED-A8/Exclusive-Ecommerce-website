@@ -69,8 +69,19 @@ export default function AuthenticationPage() {
       password: passrref.current.value
     })
     console.log(res)
+  if (res?.data?.message==='Signup successful'){
+                toast('Signed Up succesfully', {
+        position: "bottom-right",
+        autoClose: 3000,
+        className: "toast-success"
+      });
+      setTimeout(() => {
+        nav('/')
+      dispatch(setLoggedin(true))
 
-    if (signuperror?.data?.message==='Check your credintials') {
+      }, 500);
+    }
+    else if (signuperror?.data?.message==='Check your credintials') {
 console.log('dsadashjdhj231')
       
 
@@ -84,18 +95,7 @@ console.log('dsadashjdhj231')
       }, 500);
     }
 
-    else if (signupsuccess){
-                toast('Signed Up succesfully', {
-        position: "bottom-right",
-        autoClose: 3000,
-        className: "toast-success"
-      });
-      setTimeout(() => {
-        nav('/')
-      dispatch(setLoggedin(true))
-
-      }, 500);
-    }
+   
         else {
       console.log('dsadashjdhj')
        toast('Couldnt sign up,please try later', {
