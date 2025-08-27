@@ -1,0 +1,319 @@
+/* CheckoutPage.module.css */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.formContainer {
+  flex: 1;
+  margin-right: 40px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formTitle {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkbox {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.orderSummary {
+  flex: 1;
+  max-width: 350px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.summaryTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.orderItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: nowrap;
+}
+
+.itemImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.itemTitle {
+  flex: 1;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.divider {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.freeShipping {
+  color: #28a745;
+}
+
+.paymentMethod {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.paymentLabel {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.paymentLabel input {
+  margin-right: 8px;
+}
+
+.paymentImages {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 5px;
+}
+
+.paymentImages img {
+  width: 30px;
+  height: 30px;
+}
+
+.couponContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.couponInput {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #d33;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.placeOrderButton {
+  background-color: #d33;
+  color: #fff;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.fallback {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.fallbackHeading {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-size: 32px;
+  color: #666;
+}
+
+.quantityText {
+  font-size: 12px;
+  color: #666;
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .formContainer {
+    flex: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .orderSummary {
+    flex: none;
+    max-width: 100%;
+  }
+  
+  .formTitle {
+    font-size: 26px;
+  }
+  
+  .summaryTitle {
+    font-size: 22px;
+  }
+  
+  .orderItem {
+    flex-wrap: wrap;
+  }
+  
+  .quantityText {
+    display: block;
+  }
+  
+  .couponContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .form {
+    gap: 15px;
+  }
+  
+  .formTitle {
+    font-size: 24px;
+  }
+  
+  .summaryTitle {
+    font-size: 20px;
+  }
+  
+  .input {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .checkbox {
+    font-size: 14px;
+  }
+  
+  .orderSummary {
+    padding: 15px;
+  }
+  
+  .itemImage {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .itemTitle {
+    font-size: 14px;
+  }
+  
+  .price {
+    font-size: 14px;
+  }
+  
+  .summaryRow {
+    font-size: 14px;
+  }
+  
+  .totalRow {
+    font-size: 16px;
+  }
+  
+  .paymentLabel {
+    font-size: 14px;
+  }
+  
+  .couponInput {
+    font-size: 14px;
+  }
+  
+  .button {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .placeOrderButton {
+    padding: 15px;
+    font-size: 16px;
+  }
+  
+  .fallbackHeading {
+    width: 100%;
+    font-size: 24px;
+  }
+  
+  .fallback {
+    padding: 20px;
+  }
+}
