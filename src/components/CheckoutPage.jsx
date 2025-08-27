@@ -7,7 +7,7 @@ import OrderPlacedModal from './OrderPlcaedModal';
 import MyModal from './OrderPlcaedModal';
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-import styles from './CheckoutPage.module.css';
+import styles from './Checkoutpage.module.css';
 
 export default function CheckoutPage() {
   const [paymentMethod, setPaymentMethod] = useState("cash");
