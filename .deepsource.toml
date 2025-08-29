@@ -2,13 +2,6 @@ version = 1
 
 [[analyzers]]
 name = "javascript"
-enabled = true
 
   [analyzers.meta]
-  javascript_version = "esnext"
-  module_system = "esmodules"
-  style_guide = "airbnb"
-
-[[transformers]]
-name = "prettier"
-enabled = true
+  plugins = ["react"]
