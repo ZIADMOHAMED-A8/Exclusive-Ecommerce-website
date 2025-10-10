@@ -506,6 +506,7 @@ input:focus {
   align-items: center;
   position: relative;
   padding: 50px;
+    scroll-snap-align: center;
 }
 
 .product-cart::before {
@@ -549,6 +550,7 @@ input:focus {
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden;
+  scroll-snap-type: x mandatory
 }
 
 .productsCont {
