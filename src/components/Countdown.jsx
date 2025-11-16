@@ -31,7 +31,7 @@ export default function Countdown() {
 }
 
 function getTimeDifference() {
-  const endDate = new Date("2025-10-25T14:30:00");
+  const endDate = new Date("2025-12-25T14:30:00");
   const now = new Date();
 
   let diffMs = endDate - now;
