@@ -288,6 +288,7 @@ input:focus {
   border: 1px solid #ddd; 
   border-radius: 8px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  
 }
 
 
@@ -295,11 +296,11 @@ input:focus {
   display: none;
 }
 
-.search-results li {
+.search-results .results {
   padding: 15px 20px; 
   display: grid;
   grid-template-columns: 60px 1fr;
-
+  
   gap: 15px; 
   align-items: center; 
   cursor: pointer; 
@@ -331,10 +332,12 @@ input:focus {
 }
 
 .no-results {
-  padding: 20px;
+  padding: 20px 50px;
   text-align: center;
   color: #666;
   font-style: italic;
+  
+  
 }
 
 /* تحسينات للـ Mobile */
