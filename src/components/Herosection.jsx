@@ -19,15 +19,7 @@ export default function Herosection(){
         <div className="hero container">
             <div className="contents">
                 <ul>
-                    {/* <li>Women's Fashion</li>
-                    <li>Men's Fashion</li>
-                    <li>Electroniecs</li>
-                    <li>Home&life style</li>
-                    <li>Medicine</li>
-                    <li>Sports&outdoor</li>
-                    <li>Baby's & toys</li>
-                    <li>Pets</li>
-                    <li>Healthy &beauty</li> */}
+                   
                     {uniqueCategories.map((item)=><li style={{cursor:'pointer'}} onClick={()=>{navigate(`/products/${item}`)}} key={item}>{item}</li>)}
 
                 </ul>

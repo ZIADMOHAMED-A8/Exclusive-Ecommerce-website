@@ -54,7 +54,7 @@ export default function MyModal() {
 
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">
-                    هنا تحط أي نص أو عناصر انت محتاجها.
+                    
                   </p>
                 </div>
 
