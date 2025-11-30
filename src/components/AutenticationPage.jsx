@@ -132,9 +132,9 @@ console.log('dsadashjdhj231')
               </div>
               {!isLoggingIn && <input required name='Name' ref={nameref} type="text" placeholder='Name' />}
               <input required name='emailorphonenum' ref={userref} type="text" placeholder='Email or phone number' />
-              <div className=' w-full relative'>
+              <div className='password-input-wrapper'>
               <input required type={type} name='Password' ref={passrref} placeholder='Password' />
-              <span onClick={toogleHide} className="absolute top-1/2 -translate-y-1/2 cursor-pointer left-1/2.1" > {type === 'password' ? <AiOutlineEye></AiOutlineEye> : <AiOutlineEyeInvisible></AiOutlineEyeInvisible>}</span>
+              <span onClick={toogleHide} className="password-toggle-icon" > {type === 'password' ? <AiOutlineEye></AiOutlineEye> : <AiOutlineEyeInvisible></AiOutlineEyeInvisible>}</span>
 
               </div>
               {!isLoggingIn &&
