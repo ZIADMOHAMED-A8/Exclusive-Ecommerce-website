@@ -63,7 +63,7 @@ export default function Productpage() {
 
                 </div>
                 <div className="product-details">
-                    <h3>{data[productIndex].title}</h3>
+                    <h3 className="text-2xl font-bold">{data[productIndex].title}</h3>
                     <div className="rating-div"><p>{Stars(4)}</p>({(data[productIndex].rating.count)} Reviews)</div>
                     <p className="product-price">${data[productIndex].price}</p>
                     <div className="product-desc" >{data[productIndex].description}</div>
