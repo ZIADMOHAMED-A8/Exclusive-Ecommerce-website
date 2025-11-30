@@ -2,17 +2,18 @@ import { useEffect, useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useRef } from 'react';
-import { Form } from 'react-router-dom';
 import cartImage from '../assets/dl.beatsnoop 1.png'
-import { useLoginMutation, useRegisterMutation, useSignupMutation } from '../../auth/authApiSlice';
+import { useLoginMutation, useSignupMutation } from '../../auth/authApiSlice';
 import { selectCurrentToken, setLoggedin } from '../../auth/authSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
-
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 export default function AuthenticationPage() {
 
-  let [searchParams, setsearchParams] = useSearchParams()
-  const [login, { isLoading, isError, data }] = useLoginMutation()
+  let [searchParams] = useSearchParams()
+  const [login, { isLoading }] = useLoginMutation()
+  let [type, setType] = useState('password')
+
   let userref = useRef()
   let passrref = useRef();
   let nameref = useRef()
@@ -60,6 +61,11 @@ export default function AuthenticationPage() {
     }
 
   }
+  function toogleHide() {
+    setType((type) => type === 'password' ? 'text' : 'password')
+  }
+
+
   async function handleSignup(e) {
     e.preventDefault();
 
@@ -121,12 +127,16 @@ console.log('dsadashjdhj231')
           <div className="container">
             <form className='auth-form'>
               <div className="form-text">
-                <h1>{isLoggingIn ? 'Log in to Execlusive' : 'Create an account'}</h1>
+                <h1 className="text-4xl font-bold">{isLoggingIn ? 'Log in to Execlusive' : 'Create an account'}</h1>
                 <p>Enter your details below</p>
               </div>
               {!isLoggingIn && <input required name='Name' ref={nameref} type="text" placeholder='Name' />}
               <input required name='emailorphonenum' ref={userref} type="text" placeholder='Email or phone number' />
-              <input required type="text" name='Password' ref={passrref} placeholder='Password' />
+              <div className=' w-full relative'>
+              <input required type={type} name='Password' ref={passrref} placeholder='Password' />
+              <span onClick={toogleHide} className="absolute top-1/2 -translate-y-1/2 cursor-pointer left-1/2.1" > {type === 'password' ? <AiOutlineEye></AiOutlineEye> : <AiOutlineEyeInvisible></AiOutlineEyeInvisible>}</span>
+
+              </div>
               {!isLoggingIn &&
                 <div className="buttons">
                   <button  type='button' className='formalbutton' style={signuploading ? {backgroundColor:'gray',width: '100%',transition:'0.3s'} : {width: '100%',transition:'0.3s'}} disabled={signuploading} onClick={handleSignup}>Sign Up</button>
