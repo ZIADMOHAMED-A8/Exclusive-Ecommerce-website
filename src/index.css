@@ -1661,11 +1661,34 @@ footer p {
   border-bottom: 1px solid #b9bbbc;
   border-radius: 0px;
 }
+.password-input-wrapper {
+  position: relative;
+  width: 60%;
+}
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #b9bbbc;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width:767px) {
   .auth-form .buttons,.auth-form a{
     width: 100%;
   }
   .auth-form input{
+    width: 100%;
+  }
+  .password-input-wrapper {
     width: 100%;
   }
   .auth-form{
