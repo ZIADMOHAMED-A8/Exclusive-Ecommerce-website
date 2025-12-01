@@ -379,6 +379,79 @@ input:focus {
   width: 100%;
 }
 
+.hero-banner {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  border-radius: 4px;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-brand h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.hero-offer h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 48px;
+}
+
+.hero-offer-bold {
+  font-weight: 700 !important;
+  
+}
+
+.hero-banner img {
+  max-width: 600px;
+  height: 400px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .hero-banner {
+    padding: 25px 30px;
+    min-height: 350px;
+  }
+
+  .hero-banner img {
+    max-width: 400px;
+    height: 300px;
+  }
+
+  .hero-offer h1 {
+    font-size: 28px;
+  }
+
+  .hero-brand h2 {
+    font-size: 20px;
+  }
+}
+
 .hero .contents {
   padding-top: 50px;
   padding-right: 50px;
@@ -394,7 +467,12 @@ input:focus {
 .hero ul li {
   font-weight: 500;
   font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
+.hero ul li:hover {
+  color: #DB4444;
 }
 
 
@@ -411,6 +489,37 @@ input:focus {
 
   .hero ul li {
     text-align: center;
+  }
+
+  .hero-banner {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-brand {
+    justify-content: center;
+  }
+
+  .hero-banner img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .hero-offer h1 {
+    font-size: 24px;
+  }
+
+  .hero-brand h2 {
+    font-size: 18px;
   }
 }
 @media (max-width:600px) {
