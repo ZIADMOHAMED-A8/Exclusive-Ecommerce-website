@@ -24,7 +24,13 @@ function App() {
     let dispatch=useDispatch()
     let {items:data,error,loading}=useSelector((state)=>state.product)
   let {data:isin,isLoading}=useCheckLoggedInQuery()
+  useEffect(() => {
+    document.querySelectorAll('img:not([loading])')
+      .forEach(img => img.setAttribute('loading', 'lazy'));
+  }, []);
 
+
+  
     useLayoutEffect(()=>{
              if(!isLoading){
                dispatch(setLoggedin(isin))
